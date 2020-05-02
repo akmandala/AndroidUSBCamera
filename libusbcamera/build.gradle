@@ -35,4 +35,5 @@ dependencies {
 
     implementation "androidx.appcompat:appcompat:${androidXVersion}"
     api "com.serenegiant:common:${commonLibVersion}"
+    implementation project(path: ':libutils')
 }

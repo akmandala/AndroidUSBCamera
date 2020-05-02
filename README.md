@@ -2,7 +2,7 @@ AndroidUSBCamera
 ============   
 AndroidUSBCamera is developed based on the [saki4510t/UVCCamera](https://github.com/saki4510t/UVCCamera), the project of USB Camera (UVC equipment) and the use of video data acquisition are highly packaged, and it can help developers using USB Camera devices easily by a few simple APIs. By using AndroidUSBCamera,you can detect and connect to a USB Camera simply.And you also can use it to realize taking picture,recording mp4,switching resolutions ,getting h.264/aac/yuv(nv21) stream and setting  camera's contrast or brightness,supporting 480P、720P、1080P and higher,etc.supporting overlay and record device's mic.   
 
-Supporting Android 5.0,6.0,7.0,8.0,9.0,10.0
+Supporting Android 5.0,6.0,7.0,8.0,9.0
 
 [中文文档： AndroidUSBCamera，UVCCamera开发通用库](http://blog.csdn.net/andrexpert/article/details/78324181)  
 
@@ -23,7 +23,7 @@ allprojects {
 Step 2. Add the dependency  
 ```java
 dependencies {
-	implementation 'com.github.jiangdongguo:AndroidUSBCamera:2.3.4'
+	implementation 'com.github.jiangdongguo:AndroidUSBCamera:2.3.2'
 }
 ```
 ### 2. APIs Introduction  
@@ -176,17 +176,11 @@ Please checking your preview format and change YUV to MJPEG or MJPEG to YUV,beca
 
 #### 2020.01.15  version 2.3.2  
 
-1. support adding time overlay(attention: overlay only support armeabi-v7a & arm64-v8a);
+1. support adding time overlay;
 2. support recording device mic;
 3. update to androidx and update commonLibVersion from 2.14.2 to 4.1.1;
 4. fix saving files failed.  
 
-#### 2020.04.14  version 2.3.4
-
-1. fix pull version 2.3.2 failed.
-2. fix android 9.0 sometimes can not preview.
-3. fix the exception when pull up the device.
-4. update to all so files to new.
 
 Download APK
 -------  
@@ -196,12 +190,12 @@ Download APK
 ext {
     androidXVersion = '1.1.0'  // variable that can be referenced to keep support libs consistent
     commonLibVersion= '4.1.1'
-    versionCompiler = 28
-    versionTarget = 27   // versionTarget>27 android 9.0 may previewed failed.
+    versionCompiler = 29
+    versionTarget = 28
     // if hope supporting 4.4
     // please modify it to 16
     minSdkVersion = 21
-    versionNameString = '1.2.1.20200414'
+    versionNameString = '1.2.0.20191101'
     javaSourceCompatibility = JavaVersion.VERSION_1_8
     javaTargetCompatibility = JavaVersion.VERSION_1_8
 }

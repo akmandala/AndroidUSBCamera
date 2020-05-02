@@ -1,7 +1,6 @@
 package com.jiangdg.usbcamera.view;
 
 import android.hardware.usb.UsbDevice;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -257,7 +256,6 @@ public class USBCameraActivity extends AppCompatActivity implements CameraDialog
                     params.setRecordPath(videoPath);
                     params.setRecordDuration(0);                        // auto divide saved,default 0 means not divided
                     params.setVoiceClose(mSwitchVoice.isChecked());    // is close voice
-
                     params.setSupportOverlay(true); // overlay only support armeabi-v7a & arm64-v8a
                     mCameraHelper.startPusher(params, new AbstractUVCCameraHandler.OnEncodeResultListener() {
                         @Override
